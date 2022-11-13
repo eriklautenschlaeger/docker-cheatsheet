@@ -28,5 +28,22 @@
 ### Start new Container from an Image (pull + start)
 `docker run <image_name>`
 
+### List all networks
+`docker network ls`
+
+### Create new Network
+`docker network create <network-name>`
+
 ### Start new specifically named, detached Container from an Image using a tag and port mapping
-`docker run -d -p<hostport>:<containerport> --name <containername> <container>:<tag>`
+`docker run -d -p <hostport>:<containerport> --name <containername> <container>:<tag>`
+
+### Another example of a more complex run command in a different syntax
+```
+docker run -d \
+-p <hostport>:<containerport> \
+-e <ENVIRONMENT_VARIABLE>=<value> \
+--name <containername> \
+--net <network-name> \
+<container>:<tag>
+```
+
