@@ -27,3 +27,6 @@
 
 ### Start new Container from an Image (pull + start)
 `docker run <image_name>`
+
+### Start new specifically named, detached Container from an Image using a tag and port mapping
+`docker run -d -p<hostport>:<containerport> --name <containername> <container>:<tag>`
